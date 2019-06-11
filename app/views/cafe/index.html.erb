@@ -1,0 +1,24 @@
+<%# <h1>Welcome to the cafe</h1> %>
+
+<div class = 'nav'>
+  <a class="nav-content" href="#home">Home</a>
+  <a class="nav-content" href="#order">Order</a>
+  <a class="nav-content" href="#checkout">Checkout</a>
+</div>
+
+<table class = 'menu'>
+ <tr>
+   <th>Item</th>
+   <th>Price</th>
+ </tr>
+ <% @menu.each do |menu_item| %>
+  <tr>
+    <td>
+      <%= menu_item.name%>
+    </td>
+    <td>
+      <%= "$%.2f" % menu_item.price %>
+    </td>
+  </tr>
+ <% end %>
+</table>
